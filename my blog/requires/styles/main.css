@@ -1,4 +1,7 @@
 @import url("./overall.css");
+@import url("./header.css");
+@import url("./post.css");
+
 .header {
   margin: var(--size-scale-1) auto;
 }
@@ -82,11 +85,15 @@
   line-height: 1.2;
   padding-bottom: var(--base-rem);
 }
+img {
+  align-items: center;
+}
 
 .blog-post__intro .read-more {
   color: var(--light-blue);
   font-size: 0.75rem;
   font-weight: 700;
+  display: grid;
   text-transform: uppercase;
 }
 
