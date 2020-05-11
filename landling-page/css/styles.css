@@ -9,6 +9,10 @@
 */
 
 /* ---- Base Rules ---- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: rgb(136, 203, 171);
   background: linear-gradient(
@@ -84,6 +88,12 @@ section {
 }
 
 .navbar__menu .menu__link:hover {
+  background: #333;
+  color: #fff;
+  transition: ease 0.3s all;
+}
+
+.navbar__menu .active__link {
   background: #333;
   color: #fff;
   transition: ease 0.3s all;
