@@ -1,37 +1,7 @@
-/**
- *
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- *
- * Dependencies: None
- *
- * JS Version: ES2015/ES6
- *
- * JS Standard: ESlint
- *
- */
-
-/**
- * Define Global Variables
- *
- */
 const sections = document.querySelectorAll("section");
 const navbar = document.querySelector("#navbar__list");
 
-/**
- * End Global Variables
- * Start Helper Functions
- *
- */
 function activeElement() {}
-
-/**
- * End Helper Functions
- * Begin Main Functions
- *
- */
 
 // build the nav
 function addSections() {
@@ -44,7 +14,7 @@ function addSections() {
   }
 }
 
-// Add class 'active' to section when near top of viewport
+// check and set the class Active
 function setActive() {
   window.addEventListener("scroll", function (event) {
     maxSection = sections[0];
@@ -66,7 +36,6 @@ function setActive() {
         all__item.classList.remove("your-active-class");
       }
     }
-    // set corresponding header style
     const active = document.querySelector(
       'li[data-nav="' + maxSection.id + '"]'
     );
@@ -85,7 +54,7 @@ function setActive() {
   });
 }
 
-// Scroll to anchor ID using scrollTO event
+// Scroll on click in section id
 function scrollOnClick() {
   navbar.addEventListener("click", function (event) {
     const clicked = document.querySelector("#" + event.target.dataset.nav);
